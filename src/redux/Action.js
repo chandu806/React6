@@ -1,6 +1,6 @@
 export const LOGIN = "LOGIN"
-export const  ADD_TO_CART = "ADD_TO_CART";
-export const UPDATE_CART = "UPDATE_CART"
+export const  ADDCART = "ADDCART";
+export const UPDATECART = "UPDATECART"
 export const STYLE = "STYLE"
 export const SHOWBTN = "SHOWBTN"
 
@@ -12,16 +12,16 @@ export const login = (token) =>{
     }
 }
 
-export const addToCart = (cart) =>{
+export const addCart = (cart) =>{
     return{
-        type: ADD_TO_CART,
+        type: ADDCART,
         payload:cart
     }
 }
 
 export const updateCart = (updatedCart) =>{
     return{
-        type:UPDATE_CART,
+        type:UPDATECART,
         payload:updatedCart
     }
 }

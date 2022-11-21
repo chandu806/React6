@@ -3,11 +3,11 @@ import{useDispatch, useSelector} from "react-redux"
 
 import {Link} from "react-router-dom"
 import axios from "axios"
-import { FiLogIn } from 'react-icons/fi'
+import { CiLogIn } from 'react-icons/fi'
 
 import "../styles/Home.css"
 import "../styles/cart.css"
-import { addToCart, style } from '../redux/Action'
+import { addCart, style } from '../redux/Action'
 
 window.h = React.createElement;
 
@@ -27,7 +27,7 @@ export const Home = () => {
             const getCart = async() =>{
                 if(Auth){
                     let response = await axios.get("https://localhost:8080/cart")
-                    dispatch(addToCart(response.data))
+                    dispatch(addCart(response.data))
                 }
             }
             getData()
@@ -41,7 +41,7 @@ export const Home = () => {
         <h1>Please Login</h1>
         <Link to={`/login`} onClick = {() => dispatch(style({div1:"inactive", div2:"inactive", div3:"active"}))} className="login">
               <p>Login</p>
-              <div><FiLogIn /></div>
+              <div><CiLogIn /></div>
         </Link>
         </div>
     }

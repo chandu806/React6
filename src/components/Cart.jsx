@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import "../styles/cart.css";
-import { addToCart, ADD_TO_CART, style, updateCart } from "../redux/Action";
+import { addCart, ADDCART, style, updateCart } from "../redux/Action";
 import { Link } from "react-router-dom";
 import {CiLogIn} from 'react-icons/fi'
 export const Cart = () => {
@@ -14,7 +14,7 @@ export const Cart = () => {
   const getCartData = useCallback(async () => {
     if(Auth){
       let response = await axios.get(`https://localhost:8080/cart`);
-      dispatch(addToCart(response.data));
+      dispatch(addCart(response.data));
     }
   });
 

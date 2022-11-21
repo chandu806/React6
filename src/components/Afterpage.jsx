@@ -20,6 +20,16 @@ export const SingleComponent = () => {
    }
 
     useEffect(() =>{
+        const[products, setProducts] = useState([]);
+        useEffect(() => {
+          fetch(`https://localhost:8080/products`)
+            .then((res) => res.json())
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
+        }, []);
+
+
+
         const getCart = () =>{
             axios.get(`https://localhost:8080/cart`)
             .then((res) => setCartData(res.data))

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, LOGIN, SHOWBTN, STYLE, UPDATE_CART } from "./Action";
+import { ADDCART, LOGIN, SHOWBTN, STYLE, UPDATECART } from "./Action";
 
 let initState = {
     token : null,
@@ -25,13 +25,13 @@ export const MovieReducer = (state = initState, {type,payload}) =>{
                 isAuth:true
             }
            
-        case ADD_TO_CART:
+        case ADDCART:
             return{
                 ...state,
                 cart :payload
             }
 
-        case UPDATE_CART:
+        case UPDATECART:
 
             let updateCart = [...state.cart]
             updateCart.forEach((item) =>{
