@@ -1,0 +1,17 @@
+.navbar__wrapper{
+    display: flex;
+   
+    align-items: center;
+    height: 74px;
+}
+
+.active{
+    width:33%;
+    height: 90%;
+    background-color: rgb(112, 112, 161);
+    text-align: center;
+    text-decoration: none;
+    
+    left: 4;
+
+}

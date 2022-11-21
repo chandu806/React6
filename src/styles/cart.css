@@ -1,0 +1,26 @@
+
+
+.login__wrapper{
+    margin-top: 40px;
+   
+    display: flex;
+    justify-content: space-around;
+  
+}
+.login{
+    width:20%;
+    font-size: 19px;
+    display: flex;
+   
+    color:rgb(43, 40, 40);
+    transition: 0.3s ease-in;
+}
+
+
+
+.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
